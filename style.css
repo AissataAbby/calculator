@@ -1,0 +1,40 @@
+body {
+  background-color: #f0f0f0; /* Couleur d'arrière-plan par défaut */
+  color: #333; /* Couleur de texte par défaut */
+}
+
+#calculator {
+  width: 350px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 10px solid #ccc;
+  border-radius: 4%;
+}
+
+input[type="text"] {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+}
+
+input[type="button"] {
+  width: 70px;
+  height: 50px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+#calculator.dark-mode {
+  background-color: #555;
+  border-color: #777;
+}
+
+input[type="button"].dark-mode {
+  background-color: #777;
+  color: #fff;
+}
