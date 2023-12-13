@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="screen" />
+      <br />
+
+      <input type="button" value="*" onclick="addToScreen('*')" />
+      <input type="button" value="/" onclick="addToScreen('/')" />
+      <input type="button" value="-" onclick="addToScreen('-')" />
+      <input type="button" value="+" onclick="addToScreen('+')" />
+
+      <input type="button" value="7" onclick="addToScreen('7')" />
+      <input type="button" value="8" onclick="addToScreen('8')" />
+      <input type="button" value="9" onclick="addToScreen('9')" />
+
+      <br />
+      <input type="button" value="4" onclick="addToScreen('4')" />
+      <input type="button" value="5" onclick="addToScreen('5')" />
+      <input type="button" value="6" onclick="addToScreen('6')" />
+
+      <br />
+      <input type="button" value="1" onclick="addToScreen('1')" />
+      <input type="button" value="2" onclick="addToScreen('2')" />
+      <input type="button" value="3" onclick="addToScreen('3')" />
+
+      <br />
+      <input type="button" value="0" onclick="addToScreen('0')" />
+      <input type="button" value="." onclick="addToScreen('.')" />
+      <input type="button" value="C" onclick="clearScreen()" />
+
+      <span id="calcule">
+        <input type="button" value="=" onclick="calculate()" id="calcul" />
+      </span>
+      <br />
+      <!-- Boutons pour changer le thème -->
+      <button onclick="setTheme('light')">Mode Clair</button>
+      <button onclick="setTheme('dark')">Mode Sombre</button>
+    </div>
+
+    <script>
+      function addToScreen(value) {
+        const screen = (document.getElementById("screen").value += value);
+      }
+
+      function calculate() {
+        let result = eval(document.getElementById("screen").value);
+        document.getElementById("screen").value = result;
+      }
+
+      function clearScreen() {
+        const screen = (document.getElementById("screen").value = "");
+      }
+
+      // Fonction pour changer le thème
+      function setTheme(theme) {
+        document.body.className = theme + "-mode";
+        document.getElementById("calculator").className = theme + "-mode";
+        let buttons = document.querySelectorAll('input[type="button"]');
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].className = theme + "-mode";
+        }
+      }
+    </script>
+  </body>
+</html>
