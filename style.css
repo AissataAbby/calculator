@@ -13,18 +13,24 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: lightgray;
 }
 
+#calcul {
+  background-color: rgb(3, 158, 242);
+  height: 84px;
+  line-height: 84px;
+}
 input[type="text"] {
-  grid-column: span 4;
-  width: calc(100% - 20px);
+  grid-column: span 3;
+  width: calc(100% - 0, 2px);
   margin-bottom: 10px;
 }
 
 input[type="button"] {
   width: 100%;
   height: 50px;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 /* Styles pour le mode sombre */
