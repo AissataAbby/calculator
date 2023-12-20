@@ -23,8 +23,11 @@ body {
 }
 input[type="text"] {
   grid-column: span 3;
-  width: calc(100% - 0, 2px);
+  width: calc(100% - 10px);
   margin-bottom: 10px;
+  height: 50px; /* La height */
+  padding: 5px; /* Le padding */
+  font-size: 24px; /* Le font-size */
 }
 
 input[type="button"] {
@@ -37,14 +40,17 @@ input[type="button"] {
 body.dark-mode {
   background-color: #333;
   color: #fff;
+  font-size: 25px;
 }
 
 #calculator.dark-mode {
   background-color: #555;
   border-color: #777;
+  font-size: 25px;
 }
 
 input[type="button"].dark-mode {
   background-color: #777;
   color: #fff;
+  font-size: 25px;
 }
